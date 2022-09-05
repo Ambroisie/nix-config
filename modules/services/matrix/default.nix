@@ -16,6 +16,10 @@ let
   domain = config.networking.domain;
 in
 {
+  imports = [
+    ./bridges.nix
+  ];
+
   options.my.services.matrix = with lib; {
     enable = mkEnableOption "Matrix Synapse";
 

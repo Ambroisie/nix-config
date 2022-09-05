@@ -29,6 +29,19 @@
       };
     };
 
+    matrix-appservices = {
+      type = "gitlab";
+      owner = "coffeetables";
+      repo = "nix-matrix-appservices";
+      ref = "main";
+      inputs = {
+        # devshell.follows = "devshell";
+        # flake-compat.follows = "flake-compat";
+        # nixlib.follows = "nixlib";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
     nixpkgs = {
       type = "github";
       owner = "NixOS";
@@ -61,6 +74,7 @@
     , agenix
     , futils
     , home-manager
+    , matrix-appservices
     , nixpkgs
     , nur
     , pre-commit-hooks

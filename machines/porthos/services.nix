@@ -68,6 +68,9 @@ in
     matrix = {
       enable = true;
       mailConfigFile = secrets."matrix/mail".path;
+      bridges = {
+        enable = true;
+      };
       # Only necessary when doing the initial registration
       # secret = "change-me";
     };

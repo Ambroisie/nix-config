@@ -21,6 +21,37 @@
         "type": "github"
       }
     },
+    "devshell": {
+      "locked": {
+        "lastModified": 1642188268,
+        "narHash": "sha256-DNz4xScpXIn7rSDohdayBpPR9H9OWCMDOgTYegX081k=",
+        "owner": "numtide",
+        "repo": "devshell",
+        "rev": "696acc29668b644df1740b69e1601119bf6da83b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "devshell",
+        "type": "github"
+      }
+    },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641205782,
+        "narHash": "sha256-4jY7RCWUoZ9cKD8co0/4tFARpWB+57+r1bLLvXNJliY=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "b7547d3eed6f32d06102ead8991ec52ab0a4f1a7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "futils": {
       "locked": {
         "lastModified": 1659877975,
@@ -58,6 +89,45 @@
         "owner": "nix-community",
         "ref": "master",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "matrix-appservices": {
+      "inputs": {
+        "devshell": "devshell",
+        "flake-compat": "flake-compat",
+        "nixlib": "nixlib",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1662227278,
+        "narHash": "sha256-n58O7wTmORHg+cwYrbKjnlKi3UQkDug9l0FY9RB6zIM=",
+        "owner": "coffeetables",
+        "repo": "nix-matrix-appservices",
+        "rev": "41c1418781dbdfae5d1c15a29b7f1b8f67e5d69f",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "coffeetables",
+        "ref": "main",
+        "repo": "nix-matrix-appservices",
+        "type": "gitlab"
+      }
+    },
+    "nixlib": {
+      "locked": {
+        "lastModified": 1643502816,
+        "narHash": "sha256-Wrbt6Gs+hjXD3HUICPBJHKnHEUqiyx8rzHCgvqC1Bok=",
+        "owner": "divnix",
+        "repo": "nixpkgs.lib",
+        "rev": "ebed7ec5bcb5d01e298535989c6c321df18b631a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "divnix",
+        "repo": "nixpkgs.lib",
         "type": "github"
       }
     },
@@ -122,6 +192,7 @@
         "agenix": "agenix",
         "futils": "futils",
         "home-manager": "home-manager",
+        "matrix-appservices": "matrix-appservices",
         "nixpkgs": "nixpkgs",
         "nur": "nur",
         "pre-commit-hooks": "pre-commit-hooks"
