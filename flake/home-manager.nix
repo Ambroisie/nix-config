@@ -20,7 +20,7 @@ let
     "${self}/modules/common"
   ];
 
-  mkHome = name: system: inputs.home-manager.lib.homeManagerConfiguration {
+  mkHomeCommon = mainModules: system: inputs.home-manager.lib.homeManagerConfiguration {
     # Work-around for home-manager
     # * not letting me set `lib` as an extraSpecialArgs
     # * not respecting `nixpkgs.overlays` [1]
@@ -33,9 +33,7 @@ let
       ];
     };
 
-    modules = defaultModules ++ [
-      "${self}/hosts/homes/${name}"
-    ];
+    modules = defaultModules ++ mainModules;
 
     extraSpecialArgs = {
       # Inject inputs to use them in global registry
@@ -45,6 +43,7 @@ let
     };
   };
 
+  mkHome = name: mkHomeCommon [ "${self}/hosts/homes/${name}" ];
 in
 {
   hosts.homes = {
