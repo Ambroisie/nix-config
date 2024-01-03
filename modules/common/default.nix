@@ -3,9 +3,9 @@
 { lib, type ? null, ... }:
 let
   allowedTypes = [
-    "nixos"
-    "home"
     "darwin"
+    "home"
+    "nixos"
   ];
 
   allowedTypesString = lib.concatStringSep ", " (builtins.map lib.escapeNixString allowedTypes);
