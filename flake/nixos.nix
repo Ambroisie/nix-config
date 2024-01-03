@@ -12,6 +12,8 @@ let
     }
     # Include generic settings
     "${self}/modules/nixos"
+    # Import common modules
+    "${self}/modules/common"
   ];
 
   buildHost = name: system: lib.nixosSystem {
@@ -24,6 +26,8 @@ let
       inherit (self) lib;
       # Inject inputs to use them in global registry
       inherit inputs;
+      # For consumption by common modules
+      type = "nixos";
     };
   };
 in
