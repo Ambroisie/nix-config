@@ -14,6 +14,8 @@ let
       # Enable home-manager
       programs.home-manager.enable = true;
     }
+    # Import common modules
+    "${self}/modules/common"
   ];
 
   mkHome = name: system: inputs.home-manager.lib.homeManagerConfiguration {
@@ -36,6 +38,8 @@ let
     extraSpecialArgs = {
       # Inject inputs to use them in global registry
       inherit inputs;
+      # For consumption by common modules
+      type = "home";
     };
   };
 
