@@ -11,6 +11,10 @@ let
   allowedTypesString = lib.concatStringSep ", " (builtins.map lib.escapeNixString allowedTypes);
 in
 {
+  imports = [
+    ./profiles
+  ];
+
   config = {
     assertions = [
       {
