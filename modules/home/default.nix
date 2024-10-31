@@ -28,6 +28,7 @@
     ./mpv
     ./nix
     ./nix-index
+    ./nixgl
     ./nixpkgs
     ./nm-applet
     ./packages
