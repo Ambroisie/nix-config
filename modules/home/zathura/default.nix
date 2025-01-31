@@ -17,4 +17,12 @@ in
       "statusbar-home-tilde" = true;
     };
   };
+
+  config.my.home.xdg.mime-apps = lib.mkIf cfg.enable {
+    applications.media.document = {
+      comic = [ "zathura.desktop" ];
+      ebook = [ "zathura.desktop" ];
+      pdf = [ "zathura.desktop" ];
+    };
+  };
 }

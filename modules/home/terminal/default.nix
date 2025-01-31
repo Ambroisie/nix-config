@@ -59,4 +59,5 @@ in
   config.home.sessionVariables = lib.mkIf (cfg.program != null) {
     TERMINAL = cfg.program;
   };
+  # FIXME: config.my.home.xdg.mime-apps.applications.terminal
 }
